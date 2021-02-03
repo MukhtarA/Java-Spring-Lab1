@@ -4,19 +4,21 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
 
-public class TestSpring {
+public class Main {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         ATMMenu ATMMenu = context.getBean("ATMMenu", ATMMenu.class);
         Account account = context.getBean("account", Account.class);
         Scanner scan = new Scanner(System.in);
 
+
         int userPin;
         int userChoice;
         int userInput;
 
+
         while (true) {
-            userPin = scan.nextInt();
+            userPin = scan.nextInt(); // pin - 1234
             if (userPin == account.getPin()){
                 System.out.println("Everything is correct");
                 break;
