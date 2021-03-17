@@ -11,6 +11,10 @@ public class Account {
         this.name = name;
     }
 
+    public Account() {
+
+    }
+
     public int getPin() {
         return pin;
     }

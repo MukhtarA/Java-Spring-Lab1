@@ -14,13 +14,19 @@
 
     <bean id="account"
           class="com.lab1.Account">
-        <constructor-arg value="1234"/>
-        <constructor-arg value="60000"/>
-        <constructor-arg value="Mukhtar"/>
+        <constructor-arg value="1234" />
+        <constructor-arg value="60000" />
+        <constructor-arg value="Mukhtar" />
     </bean>
 
     <bean id="ATMMenu"
           class="com.lab1.ATMMenu">
-        <constructor-arg value=""/>
+        <constructor-arg value="" />
+    </bean>
+
+    <bean id="db" class="com.lab1.DB">
+        <constructor-arg value="jdbc:postgresql://localhost:5430/postgres"/>
+        <constructor-arg value="m1" />
+        <constructor-arg value="qwerty" />
     </bean>
 </beans>
